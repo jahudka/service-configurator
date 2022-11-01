@@ -1,0 +1,7 @@
+nginx-site:
+  configDir: /etc/nginx/sites-available
+  owner: root
+  group: root
+  mode: 0o640
+  checkCmd: 'nginx -t'
+  reloadCmd: 'systemctl reload nginx'
