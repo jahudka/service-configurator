@@ -51,7 +51,7 @@ class GPG
 
   private function isArmoredBlock(string $text, string $type) : bool
   {
-    $pattern = sprintf('~^-+\s*begin\s+(?:gpg|pgp)\s+%s\s*-+\n~i', strtr($type, [' ' => '\s+']));
+    $pattern = sprintf('~^-+\s*begin\s+(?:gpg|pgp)\s+%s\s*-+\r?\n~i', strtr($type, [' ' => '\s+']));
     return (bool) preg_match($pattern, $text);
   }
 
