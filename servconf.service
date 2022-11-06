@@ -1,0 +1,13 @@
+[Unit]
+Description=Service Configurator
+After=network.target
+
+[Service]
+RestartSec=2s
+Type=simple
+WorkingDirectory=/opt/servconf
+ExecStart=/opt/servconf/bin/console run
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
